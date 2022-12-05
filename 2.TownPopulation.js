@@ -2,15 +2,18 @@ function population(arr){
     let towns = {};
 
     for (let el of arr){
-        [nam, people] = el.split(' <-> ')
+        let [nam, people] = el.split(' <-> ')
+        people = Number(people);
 
-        if(!towns.hasOwnProperty(nam)){
-            towns[nam] = people;
-        } else {
-            // towns[nam] = towns[people] + people;
-        }
+        if((towns[nam] != undefined)){
+            people += towns[nam];
+        } 
+
+        towns[nam] = people;
         
     }
+
+    
 
     let newArr = Object.entries(towns)
     
@@ -20,12 +23,12 @@ function population(arr){
     }
 }
 
-population(['Sofia <-> 1200000',
+population(['Istanbul <-> 100000',
 
-'Montana <-> 20000',
+'Honk Kong <-> 2100004',
 
-'New York <-> 10000000',
+'Jerusalem <-> 2352344',
 
-'Washington <-> 2345000',
+'Mexico City <-> 23401925',
 
-'Las Vegas <-> 1000000'])
+'Istanbul <-> 1000'])
