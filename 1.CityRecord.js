@@ -1,12 +1,12 @@
-// function cityRecord(name, population, tressury) {
-//   let city = {
-//     name: name,
-//     population: population,
-//     treasury: tressury,
-//   };
+function cityRecord(name, population, tressury) {
+  let city = {
+    name: name,
+    population: population,
+    treasury: tressury,
+  };
 
-//   return city;
-// }
+  return city;
+}
 
 cityRecord(
   "Tortuga",
