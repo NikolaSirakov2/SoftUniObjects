@@ -5,15 +5,15 @@ function cityTaxes(name, population, treasury){
         treasury,
         taxRate: 10,
         collectTaxes() {
-            city.treasury += Math.floor(city.population*city.taxRate); 
+            this.treasury += Math.floor(this.population*this.taxRate); 
         },
 
         applyGrowth(percentage) {
-            city.population = Math.floor(city.population*(1 + (percentage/100)));
+            this.population = Math.floor(this.population*(1 + (percentage/100)));
         },
 
         applyRecession(percentage) {
-            city.treasury = Math.floor(city.treasury*(1 - (percentage/100)));
+            this.treasury = Math.floor(this.treasury*(1 - (percentage/100)));
         }
     }
 }
